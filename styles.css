@@ -171,11 +171,12 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   z-index: 1000;
   padding: var(--sp-md) 0;
+  background: blue;
   transition: background var(--transition), padding var(--transition), box-shadow var(--transition);
 }
 
 .site-header.scrolled {
-  background: var(--clr-glass);
+  background: darkblue;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   padding: var(--sp-sm) 0;
@@ -192,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--ff-heading);
   font-size: var(--fs-lg);
   font-weight: 800;
-  color: var(--clr-heading);
+  color: #ffffff;
   letter-spacing: -0.5px;
 }
 
@@ -210,7 +211,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo span {
-  color: var(--clr-accent);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .main-nav ul {
@@ -219,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-nav a {
-  color: var(--clr-text-muted);
+  color: rgba(255, 255, 255, 0.8);
   font-size: var(--fs-sm);
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -234,13 +235,13 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--clr-accent);
+  background: #ffffff;
   transition: width var(--transition);
 }
 
 .main-nav a:hover,
 .main-nav a.active {
-  color: var(--clr-heading);
+  color: #ffffff;
 }
 
 .main-nav a:hover::after,
@@ -264,7 +265,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 26px;
   height: 2px;
-  background: var(--clr-heading);
+  background: #ffffff;
   transition: var(--transition);
   border-radius: 2px;
 }
@@ -297,7 +298,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   inset: 0;
   background: url('img/hero.png') center / cover no-repeat;
-  opacity: 0.15;
+  opacity: 0.50;
   z-index: -2;
 }
 
@@ -879,8 +880,8 @@ h1, h2, h3, h4, h5, h6 {
    =================================================== */
 .site-footer {
   padding: var(--sp-xl) 0 var(--sp-lg);
-  background: var(--clr-bg-alt);
-  border-top: 1px solid var(--clr-border);
+  background: blue;
+  border-top: 1px solid darkblue;
 }
 
 .footer-content {
@@ -897,7 +898,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-footer small {
   font-size: var(--fs-xs);
-  color: var(--clr-text-muted);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-links {
@@ -906,12 +907,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-links a {
-  color: var(--clr-text-muted);
+  color: rgba(255, 255, 255, 0.7);
   font-size: var(--fs-sm);
 }
 
 .footer-links a:hover {
-  color: var(--clr-accent);
+  color: #ffffff;
 }
 
 /* ===================================================
