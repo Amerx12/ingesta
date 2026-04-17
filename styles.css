@@ -1968,3 +1968,483 @@ p {
 .img-placeholder.gradient-6 {
   background: linear-gradient(135deg, #091d40 0%, #1a56db 50%, #bfdbfe 100%);
 }
+
+/* ============================================
+   SERVICIOS PAGE STYLES
+   ============================================ */
+
+/* --- Services Page Hero --- */
+.services-page-hero {
+  position: relative;
+  padding: calc(var(--header-height) + var(--space-4xl)) 0 var(--space-4xl);
+  background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 30%, var(--primary) 100%);
+  overflow: hidden;
+  text-align: center;
+}
+
+.services-page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(96, 165, 250, 0.2) 0%, transparent 40%);
+  z-index: 1;
+}
+
+.services-page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to top, var(--white), transparent);
+  z-index: 2;
+}
+
+.services-page-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.services-page-hero-content .overline {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-xs) var(--space-lg);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+}
+
+.services-page-hero-content h1 {
+  color: var(--white);
+  margin-bottom: var(--space-lg);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+}
+
+.services-page-hero-content h1 .gradient-text {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--primary-lighter) 50%, var(--accent-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.services-page-hero-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* --- Services Tab Navigation --- */
+.services-tabs-section {
+  background: var(--white);
+  padding-top: var(--space-3xl);
+}
+
+.services-tab-nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-3xl);
+  flex-wrap: wrap;
+}
+
+.services-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 1rem 2rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--gray-500);
+  background: var(--gray-50);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-full);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.services-tab-btn:hover {
+  color: var(--primary);
+  border-color: var(--primary-lighter);
+  background: var(--primary-50);
+  transform: translateY(-2px);
+}
+
+.services-tab-btn.active {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(26, 86, 219, 0.4);
+  transform: translateY(-2px);
+}
+
+.services-tab-btn.active svg {
+  stroke: var(--white);
+}
+
+.services-tab-btn svg {
+  stroke: var(--gray-400);
+  transition: var(--transition);
+}
+
+.services-tab-btn:hover svg {
+  stroke: var(--primary);
+}
+
+/* --- Tab Content --- */
+.services-tab-content {
+  display: none;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.services-tab-content.active {
+  display: block;
+}
+
+.tab-content-header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.tab-content-header h2 {
+  margin-bottom: var(--space-md);
+  color: var(--primary-dark);
+}
+
+.tab-content-header p {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--gray-600);
+}
+
+/* --- Projects List Vertical --- */
+.projects-list-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.project-card-full {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.project-card-full:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
+
+.project-card-full:nth-child(even) {
+  direction: rtl;
+}
+
+.project-card-full:nth-child(even) > * {
+  direction: ltr;
+}
+
+.project-card-full-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card-full-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 300px;
+  transition: transform 0.5s ease;
+}
+
+.project-card-full:hover .project-card-full-image img {
+  transform: scale(1.05);
+}
+
+.project-card-full-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-2xl);
+}
+
+.project-card-full-content .project-tag {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.3rem 1rem;
+  background: var(--primary-50);
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-md);
+}
+
+.project-card-full-content h3 {
+  margin-bottom: var(--space-md);
+  font-size: 1.5rem;
+}
+
+.project-card-full-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--gray-600);
+  margin-bottom: var(--space-lg);
+}
+
+/* --- Logistics Gallery --- */
+.logistics-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2xl);
+}
+
+.logistics-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.logistics-card:nth-child(5) {
+  grid-column: 1 / -1;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logistics-card:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-6px);
+}
+
+.logistics-image {
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+}
+
+.logistics-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.logistics-card:hover .logistics-image img {
+  transform: scale(1.05);
+}
+
+.logistics-info {
+  padding: var(--space-xl) var(--space-xl) var(--space-lg);
+}
+
+.logistics-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-sm);
+  color: var(--primary-dark);
+}
+
+.logistics-info p {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* --- Logistics Features --- */
+.logistics-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-3xl);
+  padding-top: var(--space-3xl);
+  border-top: 1px solid var(--gray-200);
+}
+
+.logistics-feature-item {
+  text-align: center;
+  padding: var(--space-xl);
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+}
+
+.logistics-feature-item:hover {
+  background: var(--primary-50);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.logistics-feature-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--space-md);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+.logistics-feature-item h4 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: var(--space-sm);
+}
+
+.logistics-feature-item p {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* --- Services CTA Section --- */
+.services-cta-section {
+  background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 50%, var(--primary) 100%);
+  padding: var(--space-4xl) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 70% 50%, rgba(96, 165, 250, 0.15) 0%, transparent 40%);
+}
+
+.services-cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.services-cta-content h2 {
+  color: var(--white);
+  margin-bottom: var(--space-md);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+}
+
+.services-cta-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.15rem;
+  margin-bottom: var(--space-2xl);
+}
+
+.services-cta-actions {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* --- Services Page Responsive --- */
+@media (max-width: 1024px) {
+  .services-tab-nav {
+    gap: var(--space-sm);
+  }
+
+  .services-tab-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .logistics-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-card-full {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-full:nth-child(even) {
+    direction: ltr;
+  }
+
+  .project-card-full-image img {
+    min-height: 250px;
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-tab-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-tab-btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .logistics-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .logistics-card:nth-child(5) {
+    max-width: 100%;
+  }
+
+  .logistics-features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .services-cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-cta-actions .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .services-page-hero {
+    padding: calc(var(--header-height) + var(--space-2xl)) 0 var(--space-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .logistics-features {
+    grid-template-columns: 1fr;
+  }
+
+  .logistics-image {
+    height: 250px;
+  }
+}

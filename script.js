@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = true;
 
         // Send via mailto as primary method
-        const mailtoLink = `mailto:santiagomaymx02@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+        const mailtoLink = `mailto:ingesprojects@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
           `Nombre: ${name}\nEmail: ${email}\nTeléfono: ${formData.get('phone') || 'No proporcionado'}\nServicio: ${formData.get('service') || 'No seleccionado'}\n\nMensaje:\n${message}`
         )}`;
 
